@@ -4,6 +4,7 @@ LICENSE = "MIT"
 
 inherit packagegroup
 
+
 PACKAGES = "\
     packagegroup-sniffer \
     packagegroup-sniffer-debug \
@@ -33,7 +34,6 @@ RDEPENDS_packagegroup-sniffer = "\
     perl \
     python-dev \
     python-imaging \
-    witapp \
     sniff \
     sniffer-app-ctl \
 "
@@ -54,7 +54,6 @@ RDEPENDS_packagegroup-sniffer-debug = "\
     libstdc++-dev \
     gdb \
     gdbserver \
-    vim \
 "
 
 #Note: psplash is not required, but it adds a nice "yocto project" splash screen and loading bar

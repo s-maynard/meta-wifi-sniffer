@@ -45,9 +45,3 @@ IMAGE_INSTALL_append_raspberrypi2 += " \
 
 export IMAGE_BASENAME = "sniffer"
 
-# append extra info to the /etc/build file
-buildinfo_append () {
-    echo "" >> ${IMAGE_ROOTFS}${sysconfdir}/build
-    echo "Build Date: `date`" >> ${IMAGE_ROOTFS}${sysconfdir}/build
-}
-

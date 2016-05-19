@@ -14,6 +14,11 @@ PACKAGES = "\
 RDEPENDS_packagegroup-sniffer = "\
     systemd-compat-units \
     linux-firmware \
+    linux-firmware-brcm43430 \
+    linux-firmware-ralink \
+    linux-firmware-rtl8192ce \
+    linux-firmware-rtl8192cu \
+    linux-firmware-rtl8192su \
     psplash \
     telnetd \
     sshd \
@@ -22,18 +27,23 @@ RDEPENDS_packagegroup-sniffer = "\
     parted \
     binutils \
     binutils-symlinks \
-    wlan-ctl \
-    packagegroup-base-wifi \
+    coreutils \
     bridge-utils \
     iw \
-    less \
-    sqlite3 \
     networkmanager \
+    wireless-tools \
+    wpa-supplicant \
+    wlan-ctl \
+    less \
     ntp \
     ntpdate \
+    openssh \
     perl \
+    perl-modules \
     python-dev \
     python-imaging \
+    python-modules \
+    syslog-ng \
     sniff \
     sniffer-app-ctl \
 "
@@ -50,10 +60,16 @@ RDEPENDS_packagegroup-sniffer-debug = "\
     g++ \
     g++-symlinks \
     make \
+    pkgconfig \
+    ldd \
+    libtool \
     libstdc++ \
     libstdc++-dev \
+    diffutils \
     gdb \
     gdbserver \
+    ctags \
+    vim-tiny \
 "
 
 #Note: psplash is not required, but it adds a nice "yocto project" splash screen and loading bar

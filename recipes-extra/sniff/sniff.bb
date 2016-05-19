@@ -2,7 +2,7 @@ SUMMARY = "sniffer app component"
 HOMEPAGE = "http://github.com/s-maynard/sniff"
 
 LICENSE = "Proprietary"
-LIC_FILES_CHKSUM = "file://COPYING;md5=d41d8cd98f00b204e9800998ecf8427e"
+LIC_FILES_CHKSUM = "file://COPYING;md5=d32239bcb673463ab874e80d47fae504"
 
 DEPENDS = "pcd8544 libwitutil libwit"
 

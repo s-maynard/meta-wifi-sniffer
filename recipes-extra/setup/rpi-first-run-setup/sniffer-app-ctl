@@ -8,27 +8,25 @@
 # Default-Stop:      0 1 6
 ### END INIT INFO
  
-DESC="WIT App Watchdog Startup Script Deamon"
-NAME="wit-watchdog"
+DESC="Sniffer Startup Script Deamon"
+NAME="sniff"
 
 case "$1" in
   start)
 	echo -n "Starting $DESC: $NAME"
-	wit_watchdog.sh &
+	sniff -dl6
 	echo "."
 	;;
   stop)
 	echo -n "Stopping $DESC: $NAME"
-	killall -9 wit_watchdog
 	killall -9 sniff
 	echo "."
 	;;
   restart)
 	echo -n "Restarting $DESC: $NAME"
-	killall -9 wit_watchdog
 	killall -9 sniff
 	sleep 1
-	wit_watchdog.sh &
+	sniff -dl6
 	echo "."
 	;;
   *)

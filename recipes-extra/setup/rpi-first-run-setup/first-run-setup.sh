@@ -40,32 +40,7 @@ echo "export PATH=$PATH" >> /home/$username/.bashrc
 echo "alias l='ls -CF'" >> /home/$username/.bashrc
 echo "alias la='ls -A'" >> /home/$username/.bashrc
 echo "alias ll='ls -alF'" >> /home/$username/.bashrc
-#echo "export PATH=$PATH:/usr/sbin:/sbin" >> /home/$username/.bashrc
-#if [[ "$PATH" != "*sbin*" ]] ; then
-#    export PATH="/sbin:/usr/sbin:$PATH" >> /home/$username/.bash_profile
-#fi
 
-echo "ctrl_interface=/var/run/wpa_supplicant" > /etc/wpa_supplicant.conf
-echo "ctrl_interface_group=0" >> /etc/wpa_supplicant.conf
-echo "update_config=1" >> /etc/wpa_supplicant.conf
-echo "network={" >> /etc/wpa_supplicant.conf
-echo "  ssid=\"TenerVista-5G\"" >> /etc/wpa_supplicant.conf
-echo "  proto=WPA RSN" >> /etc/wpa_supplicant.conf
-echo "  scan_ssid=1" >> /etc/wpa_supplicant.conf
-echo "  key_mgmt=WPA-PSK" >> /etc/wpa_supplicant.conf
-echo "  pairwise=CCMP TKIP" >> /etc/wpa_supplicant.conf
-echo "  group=CCMP TKIP" >> /etc/wpa_supplicant.conf
-echo "  psk=2af52545151de2d6c57e99a765499768a4435de78de82f13cb7493f98cbe68c2" >> /etc/wpa_supplicant.conf
-echo "}" >> /etc/wpa_supplicant.conf
-echo "network={" >> /etc/wpa_supplicant.conf
-echo "  ssid=\"TenerVista-2.4G\"" >> /etc/wpa_supplicant.conf
-echo "  proto=WPA RSN" >> /etc/wpa_supplicant.conf
-echo "  scan_ssid=1" >> /etc/wpa_supplicant.conf
-echo "  key_mgmt=WPA-PSK" >> /etc/wpa_supplicant.conf
-echo "  pairwise=CCMP TKIP" >> /etc/wpa_supplicant.conf
-echo "  group=CCMP TKIP" >> /etc/wpa_supplicant.conf
-echo "  psk=d58eaa7c52383b9ddc595e97e9bd207e048a2a625c411eff6f0920a185e36ce8" >> /etc/wpa_supplicant.conf
-echo "}" >> /etc/wpa_supplicant.conf
 
 # Lock the root account
 usermod -L "$rootusername"

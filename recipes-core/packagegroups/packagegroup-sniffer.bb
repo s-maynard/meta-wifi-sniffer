@@ -46,6 +46,8 @@ RDEPENDS_packagegroup-sniffer = "\
     syslog-ng \
     sniff \
     sniffer-app-ctl \
+    nano \
+    tmux \
 "
 
 # Components used in debug sniffer

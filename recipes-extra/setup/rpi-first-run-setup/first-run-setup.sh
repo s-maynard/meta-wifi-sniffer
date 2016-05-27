@@ -31,7 +31,7 @@ $password
 EOF
 
 # Add the new user to the sudoers list
-echo "$username ALL=(ALL:ALL) ALL" >> /etc/sudoers
+echo "$username ALL=(ALL:ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 # Update the environment PATH
 # Note - /sbin and /usr/sbin are only added to the path for the root user.  The following

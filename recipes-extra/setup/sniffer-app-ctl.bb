@@ -12,6 +12,7 @@ RDEPENDS_${PN} = "sudo"
 SRC_URI = " \
     file://LICENSE \
     file://sniffer-app-ctl \
+    file://wit.cfg \
 "
 
 inherit update-rc.d
@@ -32,5 +33,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 FILES_${PN} += "\
     ${prefix} \
     ${sysconfdir}/init.d/sniffer-app-ctl \
+    /home/pi/wit.cfg \
 "
 

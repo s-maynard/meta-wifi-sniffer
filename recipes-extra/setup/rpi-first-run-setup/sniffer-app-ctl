@@ -14,6 +14,7 @@ NAME="sniff"
 case "$1" in
   start)
 	echo -n "Starting $DESC: $NAME"
+	syslog-ng
 	sniff -dl6
 	echo "."
 	;;

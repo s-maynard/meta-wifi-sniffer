@@ -24,8 +24,7 @@ INITSCRIPT_PARAMS = "start 99 2 3 4 5 . stop  80 0 6 1 ."
 do_install() {
     install -d ${D}${sysconfdir}/init.d/
     install -m 0755 ${WORKDIR}/sniffer-app-ctl ${D}${sysconfdir}/init.d/
-    install -d ${D}/home/pi/
-    install -m 0755 ${WORKDIR}/wit.cfg ${D}/home/pi/
+    install -m 0755 ${WORKDIR}/wit.cfg ${D}/${sysconfdir}
 }
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
@@ -33,6 +32,6 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 FILES_${PN} += "\
     ${prefix} \
     ${sysconfdir}/init.d/sniffer-app-ctl \
-    /home/pi/wit.cfg \
+    ${sysconfdir}/wit.cfg \
 "
 
